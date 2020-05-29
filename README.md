@@ -16,6 +16,6 @@ const ExampleComponent = () => {
 
 Component props:
 
-size?: Sizes | number;
-visible?: boolean;
-className?: string;
+`size?: Sizes | number;`
+`visible?: boolean;`
+`className?: string;`
