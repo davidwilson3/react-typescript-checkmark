@@ -16,8 +16,12 @@ const ExampleComponent = () => {
 
 Component props:
 
-`size?: Sizes | number;`
+`size`: the size of the checkmark
 
-`visible?: boolean;`
+`visible`: a boolean value that toggles visibility
 
-`className?: string;`
+`backgroundColor`: accepts string that is passed to styling as CSS color (#00000, blue, .etc)
+
+`checkColor`: accepts string that is passed to styling as CSS color (#00000, blue, .etc)
+ 
+`checkThickness`: accepts a number that determines the thickness of the checkmark
