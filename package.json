@@ -1,10 +1,10 @@
 {
-  "name": "react-checkmark",
-  "description": "Animated checkmark for React",
-  "version": "1.1.1",
+  "name": "react-typescript-checkmark",
+  "description": "A TypeScript safe, color customizable, animated checkmark for React.",
+  "version": "1.0",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/stanleyxu2005/react-checkmark",
-  "author": "Qian Xu (https://github.com/stanleyxu2005)",
+  "homepage": "https://github.com/davidwilson3/react-typescript-checkmark",
+  "author": "David Wilson (https://github.com/davidwilson3)",
   "main": "dist/react-checkmark.min.js",
   "scripts": {
     "build:dev": "webpack --env=dev --progress --profile --colors",
