@@ -10,15 +10,15 @@ const rootDir = path.resolve(__dirname, '..');
 
 module.exports = Merge(CommonConfig, {
   entry: {
-    'react-checkmark': './src/checkmark.js',
-    'react-checkmark.min': './src/checkmark.js',
+    'react-checkmark': './src/checkmark.tsx',
+    'react-checkmark.min': './src/checkmark.tsx',
   },
 
   output: {
     path: path.resolve(rootDir, 'dist'),
-    filename: '[name].js',
+    filename: '[name].jsx',
     sourceMapFilename: '[name].map',
-    library: 'reactCheckmark',
+    library: 'reactTypescriptCheckmark',
     libraryTarget: 'umd',
   },
 
@@ -31,9 +31,7 @@ module.exports = Merge(CommonConfig, {
   ],
 
   optimization: {
-    minimizer: [
-      new UglifyJsPlugin(),
-    ],
+    minimizer: [new UglifyJsPlugin()],
   },
 
   externals: {
@@ -42,12 +40,6 @@ module.exports = Merge(CommonConfig, {
       commonjs2: 'react',
       amd: 'react',
       root: 'react',
-    },
-    'prop-types': {
-      commonjs: 'prop-types',
-      commonjs2: 'prop-types',
-      amd: 'prop-types',
-      root: 'prop-types',
     },
   },
 });
