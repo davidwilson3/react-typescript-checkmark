@@ -1,7 +1,7 @@
 {
   "name": "react-typescript-checkmark",
   "description": "A TypeScript safe, color customizable, animated checkmark for React.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "Apache-2.0",
   "homepage": "https://github.com/davidwilson3/react-typescript-checkmark",
   "author": "David Wilson (https://github.com/davidwilson3)",

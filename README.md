@@ -4,14 +4,14 @@ This is an animated checkmark in React with TypeScript. This is a fork of a prev
 
 **Adding this package:**
 ```
-npm install react-typescript-checkmark
+npm i react-typescript-checkmark
 ```
 
 
 **Using this component:**
 
 ```javascript
-import { Checkmark } from 'react-typescript-checkmark';
+import Checkmark from 'react-typescript-checkmark';
 
 const ExampleComponent = () => {
   return <Checkmark size='large' backgroundColor='black' />;
