@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "outDir": "./examples/build'",
-    "noImplicitAny": true,
+    "outDir": "dist",
     "module": "es6",
     "target": "es5",
     "jsx": "react",
+    "lib": ["es6", "dom"],
+    "noImplicitAny": false,
+    "esModuleInterop": true,
     "allowJs": true,
-    "sourceMap": true
-  }
+    "sourceMap": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "types": []
+  },
+  "exclude": ["node_modules", "dist", "examples", "*.config.*", "build"]
 }
