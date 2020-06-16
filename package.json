@@ -1,7 +1,7 @@
 {
   "name": "react-typescript-checkmark",
-  "description": "A TypeScript safe, color customizable, animated checkmark for React.",
-  "version": "1.1.1",
+  "description": "A TypeScript safe, customizable, animated checkmark for React.",
+  "version": "1.2.1",
   "license": "Apache-2.0",
   "homepage": "https://github.com/davidwilson3/react-typescript-checkmark",
   "author": "David Wilson (https://github.com/davidwilson3)",
@@ -13,8 +13,7 @@
     "build": "npm run build:dist && npm run build:dev",
     "watch": "webpack --env=prod --progress --watch",
     "dev": "webpack-dev-server --env=dev",
-    "start": "concurrently --kill-others \"npm run watch\" \"npm run dev\"",
-    "tsc": "tsc ./src/checkmark.tsx --jsx react"
+    "start": "concurrently --kill-others \"npm run watch\" \"npm run dev\""
   },
   "dependencies": {
     "@types/styled-components": "^5.1.0",

@@ -5,6 +5,8 @@ interface StyledProps {
   backgroundColor: string;
   checkColor: string;
   checkThickness: number;
+  animationDuration: number;
+  explosion: number;
 }
 
 const StyledSVG = styled.div<Props>`
@@ -16,7 +18,9 @@ const StyledSVG = styled.div<Props>`
     stroke: ${(props) => props.checkColor};
     stroke-width: ${(props) => props.checkThickness};
     stroke-miterlimit: 10;
-    animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+    animation: fill ${(props) => props.animationDuration * 0.66}s ease-in-out 0.4s
+        forwards,
+      scale 0.3s ease-in-out 0.9s both;
   }
 
   .checkmark__circle {
@@ -26,14 +30,16 @@ const StyledSVG = styled.div<Props>`
     stroke-miterlimit: 10;
     stroke: ${(props) => props.backgroundColor};
     fill: none;
-    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+    animation: stroke ${(props) => props.animationDuration}s
+      cubic-bezier(0.65, 0, 0.45, 1) forwards;
   }
 
   .checkmark__check {
     transform-origin: 50% 50%;
     stroke-dasharray: 48;
     stroke-dashoffset: 48;
-    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+    animation: stroke ${(props) => props.animationDuration * 0.5}s
+      cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
   }
 
   @keyframes stroke {
@@ -48,7 +54,7 @@ const StyledSVG = styled.div<Props>`
       transform: none;
     }
     50% {
-      transform: scale3d(1.1, 1.1, 1);
+      transform: scale3d(${(props) => props.explosion}, ${(props) => props.explosion}, 1);
     }
   }
 
@@ -82,6 +88,8 @@ const Checkmark = ({
   backgroundColor = '#7ac142',
   checkColor = '#FFF',
   checkThickness = 5,
+  animationDuration = 0.6,
+  explosion = 1.1,
 }: Props) => {
   const selectedSize = typeof size === 'number' ? size : sizes[size];
   const style = { width: selectedSize, height: selectedSize };
@@ -93,6 +101,8 @@ const Checkmark = ({
       backgroundColor={backgroundColor}
       checkColor={checkColor}
       checkThickness={checkThickness}
+      animationDuration={animationDuration}
+      explosion={explosion}
     >
       <svg
         className='checkmark'

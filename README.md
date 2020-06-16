@@ -3,10 +3,10 @@
 This is an animated checkmark in React with TypeScript. This is a fork of a previous project that lacked TypeScript, optional colors, and a few minor props. This project decided to forego the previous projects use of .LESS styling files and instead use the 'styled-components' library. This allows for broader customization of the styling via props.
 
 **Adding this package:**
+
 ```
 npm i react-typescript-checkmark
 ```
-
 
 **Using this component:**
 
@@ -14,7 +14,14 @@ npm i react-typescript-checkmark
 import Checkmark from 'react-typescript-checkmark';
 
 const ExampleComponent = () => {
-  return <Checkmark size='large' backgroundColor='black' />;
+  return (
+    <Checkmark
+      size='large'
+      backgroundColor='blue'
+      animationDuration={0.8}
+      explosion={1.2}
+    />
+  );
 };
 ```
 
@@ -29,5 +36,11 @@ Component props:
 `backgroundColor`: accepts string that is passed to styling as CSS color (#00000, blue, etc)
 
 `checkColor`: accepts string that is passed to styling as CSS color (#00000, blue, etc)
- 
+
 `checkThickness`: accepts a number that determines the thickness of the checkmark
+
+`animationDuration`: the time in seconds for the animation to draw
+
+`explosion`: how big the checkmark expands or 'explodes' as part of the animation
+
+
