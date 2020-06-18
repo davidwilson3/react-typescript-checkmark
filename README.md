@@ -1,6 +1,6 @@
 # react-typescript-checkmark
 
-This is an animated checkmark in React with TypeScript. This is a fork of a previous project that lacked TypeScript, optional colors, and a few minor props. This project decided to forego the previous projects use of .LESS styling files and instead use the 'styled-components' library. This allows for broader customization of the styling via props.
+This is an animated, customizable checkmark in React with TypeScript. This is a fork of a previous project that was double this project's bundle size and lacked TypeScript type files and a few props. 
 
 **Adding this package:**
 
